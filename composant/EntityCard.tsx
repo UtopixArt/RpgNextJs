@@ -1,4 +1,4 @@
-import { Entity } from "@/lib/entities/entity";
+import { Entity } from "@/game/entities/entity";
 import StatusAffichage from "./StatusJoueur";
 
 function HeroCard({ entity }: { entity: Entity }) {

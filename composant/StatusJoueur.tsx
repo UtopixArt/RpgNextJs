@@ -1,4 +1,4 @@
-import { EntityStats } from "@/lib/entities/entity";
+import { EntityStats } from "@/game/entities/entity";
 
 function StatusAffichage(props: EntityStats) {
     return (
