@@ -1,9 +1,7 @@
 'use client';
 
-
 import HeroCard from "@/composant/EntityCard";
 import { useGameEngine } from "@/hooks/useGameEngine";
-
 
 export default function Home() {
   const { hero, monster, handleAttack } = useGameEngine();
@@ -12,7 +10,7 @@ export default function Home() {
       <h1 className="text-5xl font-bold mb-12">RPG Battle</h1>
 
       <div className="flex gap-12">
-       <HeroCard entity={hero} />
+       <HeroCard entity={hero!} />
        <HeroCard entity={monster} />
       </div>
       <div className="mt-8">

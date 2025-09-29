@@ -1,7 +1,12 @@
 import { Entity } from "@/game/entities/entity";
 import StatusAffichage from "./StatusJoueur";
 
-function HeroCard({ entity }: { entity: Entity }) {
+function HeroCard({ entity }: { entity: Entity | null }) { // Accepte aussi null
+    // Si l'entité est nulle, on n'affiche rien.
+    if (!entity) {
+        return null;
+    }
+
     return (
         <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg border border-gray-700">
             <h2 className="text-2xl font-bold mb-2">{entity.name}</h2>

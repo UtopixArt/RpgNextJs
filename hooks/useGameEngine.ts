@@ -1,6 +1,6 @@
 'use client'
 
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import { GameEngine } from "@/game/gameEngine";
 
 export function useGameEngine() {
@@ -10,6 +10,9 @@ export function useGameEngine() {
         gameEngine.attackTurn();
         forceUpdate();
     };
+    useEffect(() => {
+        gameEngine.loadHero().then(() => forceUpdate());
+    }, [gameEngine]);
     return {
         hero: gameEngine.hero,
         monster: gameEngine.monster,

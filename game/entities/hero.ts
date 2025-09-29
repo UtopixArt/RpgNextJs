@@ -1,6 +1,9 @@
 import { Entity } from "./entity";
 
 export class Hero extends Entity {
+    level: number = 0;
+    experience: number = 0;
+
     speak(message: string): void {
         console.log(`${this.name} says: ${message}`);
     };
